@@ -24,5 +24,6 @@
     "@roots/bud-sass": "^6.12.0",
     "@roots/bud-tailwindcss": "6.12.0",
     "@roots/sage": "6.12.0"
-  }
+  },
+  "dependencies": {}
 }

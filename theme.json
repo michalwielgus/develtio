@@ -1271,8 +1271,13 @@
       "customFontSize": false,
       "fontFamilies": [
         {
-          "name": "Quicksand",
+          "name": "Lato",
           "slug": "sans",
+          "fontFamily": "Lato,sans-serif"
+        },
+        {
+          "name": "Quicksand",
+          "slug": "headings",
           "fontFamily": "Quicksand,sans-serif"
         }
       ],

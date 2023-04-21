@@ -7,7 +7,8 @@ module.exports = {
     },
 
     fontFamily: {
-      sans: ['Quicksand', 'sans-serif'],
+      sans: ['Lato', 'sans-serif'],
+      headings: ['Quicksand', 'sans-serif'],
     },
   },
   plugins: [],

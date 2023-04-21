@@ -1,0 +1,30 @@
+@use '../utilities/variables' as *;
+@use '../utilities/functions' as *;
+@use '../utilities/mixins' as *;
+
+.footer {
+  background-color: color(blue, 100);
+  color: #ffffff;
+  padding: 64px 0;
+
+  .widget-title,
+  .widget h2,
+  .widget h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  a {
+    transition: color 0.2s;
+
+    &:hover,
+    &:active {
+      color: color(orange, 100);
+    }
+  }
+}

@@ -1,0 +1,113 @@
+@use '../utilities/variables' as *;
+@use '../utilities/functions' as *;
+@use '../utilities/mixins' as *;
+
+.hero {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: color(blue, 100);
+    opacity: 0.75;
+
+    @include media($breakpoint-md) {
+      height: 259px;
+    }
+  }
+
+  @include media($breakpoint-lg) {
+    min-height: 732px;
+    background-position: top left;
+  }
+
+  &__wrapper {
+    @include media($breakpoint-lg) {
+      min-height: 732px;
+    }
+  }
+
+  &__text {
+    z-index: 1;
+    max-width: 658px;
+    align-content: center;
+    height: 200px;
+
+    @include media($breakpoint-md) {
+      height: 259px;
+    }
+
+    h1 {
+      color: color(orange, 100);
+      font-size: $font-xxl * 0.6;
+
+      @include media($breakpoint-md) {
+        font-size: $font-xxl;
+      }
+    }
+
+    p {
+      font-size: $font-l * 0.6;
+      color: #ffffff;
+      @apply font-headings;
+      line-height: 1.2;
+
+      @include media($breakpoint-md) {
+        font-size: $font-l;
+      }
+    }
+  }
+
+  &__form {
+    z-index: 1;
+    max-width: 489px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 48px rgba(22, 22, 22, 0.08);
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    @include media($breakpoint-md) {
+      padding: 40px;
+      margin-bottom: 64px;
+      margin-top: 64px;
+    }
+  }
+
+  &__form-title {
+    font-size: $font-m;
+    line-height: 1.08;
+    color: color(blue, 100);
+    @apply font-headings;
+    margin-bottom: 20px;
+  }
+
+  input:not([type='checkbox'], [type='submit']) {
+    width: 100%;
+    border: solid 1px color(gray, 300);
+    color: rgba(22, 22, 22, 0.7);
+    margin-bottom: 12px;
+    padding: 13px 16px;
+  }
+
+  input[type='checkbox'] {
+    border: solid 1px color(gray, 300);
+    width: 17px;
+    height: 17px;
+    margin: 0;
+  }
+
+  label {
+    display: block;
+    font-size: $font-xs;
+    color: rgba(22, 22, 22, 0.5);
+    margin-bottom: 16px;
+  }
+}

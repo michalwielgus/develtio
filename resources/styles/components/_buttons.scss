@@ -1,0 +1,23 @@
+@use '../utilities/variables' as *;
+@use '../utilities/functions' as *;
+
+.btn {
+  border-radius: 10px;
+  padding: 14px 50px;
+  min-width: 205px;
+  @apply font-headings;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  text-align: center;
+  transition: background-color 0.2s;
+
+  &--orange {
+    background-color: color(orange, 100);
+    color: #ffffff;
+
+    &:hover {
+      background-color: color(orange, 200);
+    }
+  }
+}

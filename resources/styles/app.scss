@@ -1,5 +1,8 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
-@import 'test.scss';
+@use 'tailwindcss/utilities';
+@use 'base/reset';
+@use 'base/typography';
+@use 'components/buttons';
+@use 'layout/navigation';
+@use 'layout/hero';
+@use 'layout/details-section';
+@use 'layout/footer';

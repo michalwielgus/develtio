@@ -1,0 +1,46 @@
+@use '../utilities/variables' as *;
+@use '../utilities/functions' as *;
+@use '../utilities/mixins' as *;
+
+.details-section {
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &__content {
+    max-width: 800px;
+    min-height: 655px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  &__title {
+    font-size: $font-xxxl * 0.6;
+    color: color(blue, 100);
+    line-height: 1.08;
+
+    @include media($breakpoint-md) {
+      font-size: $font-xxxl;
+    }
+  }
+
+  &__subtitle {
+    font-size: $font-xl * 0.6;
+    color: color(blue, 100);
+    @apply font-headings;
+    line-height: 1.18;
+
+    @include media($breakpoint-md) {
+      font-size: $font-xl;
+    }
+  }
+
+  &__description {
+    margin-top: 24px;
+  }
+
+  &__cta {
+    margin-top: 56px;
+  }
+}

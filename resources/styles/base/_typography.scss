@@ -1,0 +1,101 @@
+@use '../utilities/functions' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Quicksand:wght@700&display=swap');
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @apply font-sans;
+  font-size: 1.6rem;
+  color: color(gray, 400);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-headings;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.text-orange {
+  color: color(orange, 100);
+}
+
+.font-md {
+  font-size: $font-m;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.post-content {
+  h1,
+  .h1 {
+    font-size: $font-xxxl;
+    word-break: break-all;
+  }
+
+  h2,
+  .h2 {
+    font-size: $font-xxl;
+  }
+
+  h3,
+  .h3 {
+    font-size: $font-xl;
+  }
+
+  h4,
+  .h4 {
+    font-size: $font-l;
+  }
+
+  h5,
+  .h5 {
+    font-size: $font-m;
+  }
+
+  h6,
+  .h6 {
+    font-size: $font-s;
+  }
+
+  blockquote {
+    padding: 2rem;
+    border: solid 1px color(gray, 400);
+    background-color: color(gray);
+    margin: 2rem auto;
+  }
+
+  a {
+    color: color(orange, 100);
+
+    &:hover {
+      color: color(orange, 200);
+    }
+  }
+}
+
+.page-header h1 {
+  font-size: $font-xxxl;
+  word-break: break-all;
+}
